@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+package pb;
+
+import "gogoproto/gogo.proto";
+option (gogoproto.populate_all) = true;
+
+//公用消息结构代码
+message UserInfo {
+    uint32 UserId = 1 [(gogoproto.jsontag) = "UserId", (gogoproto.moretags) = "bson:\"_id\""];
+    string NiceName = 2;
+    uint32 Sex =3;
+    string HeadUrl = 4;
+}
